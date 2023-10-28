@@ -1,0 +1,6 @@
+import { ModalSubmitInteraction } from "discord.js";
+import { Client } from "../../types/Discord";
+
+export default {
+    run: async (client: Client, interaction: ModalSubmitInteraction) => {}
+}

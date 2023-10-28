@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    /* Type Checking */
+    "noImplicitAny": false,
+    "strict": true,
+    "strictNullChecks": false,
+    "noUnusedLocals": true,
+    "noUnusedParameters": false,
+    /* Modules */
+    "baseUrl": ".",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "types": [
+      "node",
+    ],
+    /* Emit */
+    "declaration": false,
+    "importHelpers": true,
+    "removeComments": true,
+    /* Interop Constraints */
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    /* Language and Environment */
+    "target": "ESNext",
+    "lib": [
+      "ESNext",
+    ],
+    /* Completeness */
+    "skipLibCheck": true,
+  },
+  "include": [
+    "./src/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}
