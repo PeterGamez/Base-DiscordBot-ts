@@ -1,2 +1,2 @@
 # Base DiscordBot ts
-support for discord.js v14 with TypeScript
+Base Discord.js v14 in TypeScript
