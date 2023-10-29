@@ -1,5 +1,14 @@
 {
+  "name": "base-discordbot-ts",
+  "version": "1.0.0",
+  "description": "Base Discord Bot in TypeScript",
   "main": "dist/index.js",
+  "author": "PeterGamez",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PeterGamez/Base-PHP-Framework"
+  },
   "scripts": {
     "build": "rm -rf dist && tsc",
     "test": "tsc && node ."
