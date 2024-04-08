@@ -1,5 +1,5 @@
 import { readdirSync } from "fs";
-import { Client } from "../types/Discord";
+import { Client } from "../utils/Discord";
 
 export default async (client: Client) => {
     let events = 0

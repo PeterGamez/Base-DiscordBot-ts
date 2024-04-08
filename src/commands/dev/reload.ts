@@ -1,7 +1,7 @@
 import { readdirSync } from "fs";
 import { promisify } from "util";
 import { Collection, Message } from "discord.js";
-import { Client } from "../../types/Discord";
+import { Client } from "../../utils/Discord";
 const exec = promisify(require('child_process').exec);
 
 export default {
@@ -9,7 +9,7 @@ export default {
         onlyServerAdmin: true,
     },
     run: async (client: Client, message: Message, args: Array<string>) => {
-        if (!global.config.devloper.includes(message.author.id)) return;
+        if (!client.config.devloper.includes(message.author.id)) return;
 
         const msg = await message.reply({ content: "กำลังประมวลผล" })
         exec('tsc')

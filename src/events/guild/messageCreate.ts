@@ -1,11 +1,11 @@
 import { Message, PermissionFlagsBits } from "discord.js";
-import { Client } from "../../types/Discord";
+import { Client } from "../../utils/Discord";
 
 export default async (client: Client, message: Message) => {
     if (message.author.bot) return;
-    if (message.content.startsWith(global.config.prefix)) {
+    if (message.content.startsWith(client.config.prefix)) {
 
-        const args = message.content.slice(global.config.prefix.length).trim().split(/ +/g);
+        const args = message.content.slice(client.config.prefix.length).trim().split(/ +/g);
         const command = args.shift().toLowerCase();
 
         const cmd = client.commands.get(command)

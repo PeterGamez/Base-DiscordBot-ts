@@ -1,5 +1,5 @@
 import { EmbedBuilder, Message } from "discord.js";
-import { Client } from "../../types/Discord";
+import { Client } from "../../utils/Discord";
 
 export default {
     run: async (client: Client, message: Message, args: Array<string>) => {
@@ -12,7 +12,7 @@ export default {
             content: null,
             embeds: [
                 new EmbedBuilder()
-                    .setColor(global.config.color)
+                    .setColor(client.config.color)
                     .setAuthor({ name: client.user.username, iconURL: message.guild.iconURL({ forceStatic: true }) })
                     .addFields(
                         { name: `Ping API`, value: `**${ping1} ms!**`, inline: true },

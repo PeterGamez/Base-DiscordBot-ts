@@ -1,5 +1,5 @@
 import { ButtonInteraction } from "discord.js";
-import { Client } from "../../types/Discord";
+import { Client } from "../../utils/Discord";
 
 export default {
     run: async (client: Client, interaction: ButtonInteraction) => {}

@@ -1,6 +1,6 @@
 import { Collection } from "discord.js";
 import { readdirSync } from "fs";
-import { Client } from "../types/Discord";
+import { Client } from "../utils/Discord";
 
 export default async (client: Client) => {
     client.commands = new Collection()

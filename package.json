@@ -14,7 +14,7 @@
     "test": "tsc && node ."
   },
   "dependencies": {
-    "discord.js": "^14.13.0"
+    "discord.js": "^14.14.1"
   },
   "devDependencies": {
     "@types/node": "^20.8.3",

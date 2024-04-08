@@ -1,8 +1,5 @@
 import { ActivityType } from "discord.js";
-import { Client } from "./types/Discord";
-
-import config from "./config";
-global.config = config;
+import { Client } from "./utils/Discord";
 
 const client = new Client({
     intents: [
@@ -20,4 +17,4 @@ const client = new Client({
     require(`./handlers/${handler}`).default(client)
 });
 
-client.login("");
+client.login(client.config.token);
