@@ -1,17 +1,16 @@
-import { Collection } from "discord.js";
-import { readdirSync } from "fs";
-import { Client } from "../utils/Discord";
+import { readdirSync } from "node:fs";
+import { Client, Component } from "../utils/Discord";
 
 export default async (client: Client) => {
-    client.components = new Collection()
-    
-    readdirSync(`${__dirname}/../components`).forEach(folder => {
-        client.components.set(folder, new Collection())
-        readdirSync(`${__dirname}/../components/${folder}`).filter(file => file.endsWith(`.js`)).forEach(file => {
-            const component = require(`${__dirname}/../components/${folder}/${file}`).default
-            client.components.get(folder).set(file.split(`.`)[0], component)
-        })
-    })
-    let text = client.components.map((V, K) => `${V.size} ${K}`).join(", ")
-    console.log(`[${new Date().toString().split(" ", 5).join(" ")}] Loaded ${text}`)
-}
+    readdirSync(`${__dirname}/../components`).forEach((folder) => {
+        readdirSync(`${__dirname}/../components/${folder}`)
+            .filter((file) => file.endsWith(`.js`))
+            .forEach((file) => {
+                const ComponentClass = require(`${__dirname}/../components/${folder}/${file}`).default;
+                const component = new ComponentClass(client) as Component;
+                const cmd = component.getName();
+                client.components.set(cmd, component);
+            });
+    });
+    client.log("Bot", `Loaded ${client.components.size} Components`);
+};

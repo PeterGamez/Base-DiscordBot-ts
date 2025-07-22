@@ -8,14 +8,11 @@
     "noUnusedParameters": false,
     /* Modules */
     "baseUrl": ".",
-    "module": "CommonJS",
-    "moduleResolution": "node",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "outDir": "./dist",
     "rootDir": "./src",
-    "types": [
-      "node",
-    ],
     /* Emit */
     "declaration": false,
     "importHelpers": true,
