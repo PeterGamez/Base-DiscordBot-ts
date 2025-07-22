@@ -1,8 +1,8 @@
 {
   "name": "base-discordbot-ts",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Base Discord.js v14 in TypeScript",
-  "main": "dist/index.js",
+  "module": "dist/index.js",
   "author": "PeterGamez",
   "license": "MIT",
   "repository": {
